@@ -1,10 +1,7 @@
-#include <iostream>
 #include <Eigen/Dense>
 #include <tuple>
 #include <vector>
 #include <cmath>
-#include <fstream>
-#include <iomanip>
 
 using namespace Eigen;
 
@@ -140,4 +137,5 @@ std::tuple<MatrixXd, std::vector<MatrixXd>, std::vector<double>> GPA(
 
     // STEP 7: Exit the procedure
     return {Y_consensus, X_list, scaling_factors};
+
 }
