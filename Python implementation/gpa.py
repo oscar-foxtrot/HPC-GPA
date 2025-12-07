@@ -67,7 +67,7 @@ def GPA(X_list, scale=True, epsilon=1e-4):
 
     Y_consensus = np.sum(np.stack(X_list, axis=0), axis=0) / m
     Sr = m * (1 - np.trace(Y_consensus @ Y_consensus.T))
-    print(Sr)
+    # print(Sr)
     scaling_factors = np.array([var_lambda for _ in range(m)])
 
     # STEP 3
@@ -87,7 +87,7 @@ def GPA(X_list, scale=True, epsilon=1e-4):
 
         Y_consensus_star_star = np.sum(np.stack(X_list, axis=0), axis=0) / m
         Sr_star_star = Sr - m * np.trace(Y_consensus_star_star @ Y_consensus_star_star.T - Y_consensus @ Y_consensus.T)
-        print(Sr_star_star)
+        # print(Sr_star_star)
         Y_consensus = Y_consensus_star_star
 
         # STEP 6
@@ -97,4 +97,5 @@ def GPA(X_list, scale=True, epsilon=1e-4):
             Sr = Sr_star_star
     
     # STEP 7
+
     return Y_consensus, X_list, scaling_factors
