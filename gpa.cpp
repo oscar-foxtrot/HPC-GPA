@@ -55,8 +55,12 @@ std::tuple<MatrixXd, MatrixXd, double, MatrixXd> CPA(
     aligned_X.rowwise() += Y_mean.transpose();
 
     // Translation component (optional)
-    MatrixXd translation_vec = Y_mean.transpose() - s * (X_mean.transpose() * R);
-
+    MatrixXd translation_vec;
+    if (translation) {
+        translation_vec = Y_mean.transpose() - s * (X_mean.transpose() * R);
+    } else {
+        translation_vec = MatrixXd::Zero(1, X.cols()); // or X.rows() x X.cols() if needed
+    }
     return {aligned_X, R, s, translation_vec};
 }
 
