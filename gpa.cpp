@@ -1,7 +1,10 @@
+#include <iostream>
 #include <Eigen/Dense>
 #include <tuple>
 #include <vector>
 #include <cmath>
+#include <fstream>
+#include <iomanip>
 
 using namespace Eigen;
 
@@ -44,7 +47,7 @@ std::tuple<MatrixXd, MatrixXd, double, MatrixXd> CPA(
     // Scaling if needed
     double s = 1.0;
     if (scale) {
-        s = ((X0 * R).transpose() * Y0).trace() / X0.squaredNorm();
+        s = ((X0 * R).array() * Y0.array()).sum() / X0.squaredNorm();
     }
 
     // Producing the aligned X
@@ -110,7 +113,7 @@ std::tuple<MatrixXd, std::vector<MatrixXd>, std::vector<double>> GPA(
         // STEP 5: Optional scaling
         if (scale) {
             for (int i = 0; i < m; ++i) {
-                double numerator = (X_list[i] * Y_consensus.transpose()).trace();
+                double numerator = (X_list[i].array() * Y_consensus.array()).sum();
                 double denominator = X_list[i].squaredNorm() * Y_consensus.squaredNorm();
                 double change_factor = std::sqrt(numerator / denominator);
                 double s_i_star = scaling_factors[i] * change_factor;
@@ -137,5 +140,4 @@ std::tuple<MatrixXd, std::vector<MatrixXd>, std::vector<double>> GPA(
 
     // STEP 7: Exit the procedure
     return {Y_consensus, X_list, scaling_factors};
-
 }
