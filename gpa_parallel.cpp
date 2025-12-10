@@ -183,7 +183,7 @@ std::tuple<MatrixXd, std::vector<MatrixXd>, std::vector<double>> GPA(
     return {Y_consensus, X_list, scaling_factors};
 }
 
-
+// Helper function in case reading from a file is needed
 Eigen::MatrixXd readMatrix(const std::string &filename, int rows, int cols) {
     Eigen::MatrixXd mat(rows, cols);
     std::ifstream in(filename);
@@ -197,6 +197,7 @@ Eigen::MatrixXd readMatrix(const std::string &filename, int rows, int cols) {
     return mat;
 }
 
+// Helper function in case writing to a file is needed
 void writeMatrix(const Eigen::MatrixXd& mat, const std::string& filename) {
     std::ofstream out(filename);
     if (!out) {
@@ -291,3 +292,4 @@ int main(int argc, char** argv) {
     return 0;
 
 }
+
