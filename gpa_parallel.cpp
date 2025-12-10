@@ -293,3 +293,24 @@ int main(int argc, char** argv) {
 
 }
 
+
+/*
+sbatch an .sh file with the following 
+contents to run the program on the 
+"Lomonosov-2" HPC setup
+
+#!/bin/bash
+#SBATCH -n 1
+#SBATCH -t 00:14:30
+#SBATCH -p test
+#SBATCH -o output_file.out
+#SBATCH -e error_file.err
+
+module purge
+module add slurm
+module add openmpi
+
+mpirun -n 1 ./executable_file_compiled_from_gpa_parallel_cpp
+*/
+
+
