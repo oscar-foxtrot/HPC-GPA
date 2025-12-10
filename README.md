@@ -11,4 +11,5 @@ Modules used:
   1) xalt   2) slurm/15.08.1   3) intel/2019.5   4) mkl/2019.2   5) gcc/9.1   6) openmpi/4.0.1-icc
 
 Compile options for gpa_parallel.cpp:
+
 mpicxx gpa_parallel.cpp -I"eigen-3.4.1/" -std=c++17 -w -fopenmp -o executable_file
