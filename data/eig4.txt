@@ -1,0 +1,62 @@
+Eigen reports max threads: 4
+2 2 16 2.14681
+Eigen reports max threads: 4
+12 12 2 0.551488
+Eigen reports max threads: 4
+22 22 2 0.505496
+Eigen reports max threads: 4
+32 32 2 0.488314
+Eigen reports max threads: 4
+42 42 2 0.723125
+Eigen reports max threads: 4
+52 52 2 0.779123
+Eigen reports max threads: 4
+62 62 2 0.882346
+Eigen reports max threads: 4
+72 72 2 0.87533
+Eigen reports max threads: 4
+82 82 2 0.979469
+Eigen reports max threads: 4
+92 92 2 1.10541
+Eigen reports max threads: 4
+102 102 2 1.28993
+Eigen reports max threads: 4
+112 112 2 1.50185
+Eigen reports max threads: 4
+122 122 2 1.57255
+Eigen reports max threads: 4
+132 132 2 1.88368
+Eigen reports max threads: 4
+142 142 2 1.72364
+Eigen reports max threads: 4
+152 152 2 2.09146
+Eigen reports max threads: 4
+162 162 2 2.34183
+Eigen reports max threads: 4
+172 172 2 2.63217
+Eigen reports max threads: 4
+182 182 2 2.89153
+Eigen reports max threads: 4
+192 192 2 2.83092
+Eigen reports max threads: 4
+202 202 2 3.38903
+Eigen reports max threads: 4
+212 212 2 3.58518
+Eigen reports max threads: 4
+222 222 2 3.93124
+Eigen reports max threads: 4
+232 232 2 4.28829
+Eigen reports max threads: 4
+242 242 2 4.7879
+Eigen reports max threads: 4
+252 252 2 5.38191
+Eigen reports max threads: 4
+262 262 2 5.79039
+Eigen reports max threads: 4
+272 272 2 6.17142
+Eigen reports max threads: 4
+282 282 2 6.7429
+Eigen reports max threads: 4
+292 292 2 7.35041
+Eigen reports max threads: 4
+302 302 2 8.39565
