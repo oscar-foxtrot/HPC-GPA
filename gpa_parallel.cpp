@@ -297,7 +297,8 @@ int main(int argc, char** argv) {
 /*
 sbatch an .sh file with the following 
 contents to run the program on the 
-"Lomonosov-2" HPC setup
+"Lomonosov-2" HPC setup (number of
+processes is to be specified manually)
 
 #!/bin/bash
 #SBATCH -n 1
@@ -312,5 +313,6 @@ module add openmpi
 
 mpirun -n 1 ./executable_file_compiled_from_gpa_parallel_cpp
 */
+
 
 
